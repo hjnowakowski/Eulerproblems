@@ -88,7 +88,7 @@ class PrimeNumbers2  //problem 50
         int i =0;
         int num =0;
         String  primeNumbers = "";
-        int[] prime_array;te
+        int[] prime_array;
         int n = 10000;
         int solution = 0;
         for (i = 1; i <= n; i++)  //i is prime
