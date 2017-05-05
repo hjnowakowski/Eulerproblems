@@ -1,6 +1,18 @@
 import java.util.*;
 
 
+/*
+solved:
+problem 1
+problem 30
+TODO:
+problem 501
+problem 50
+ */
+
+
+
+
 
 class threeandfive{  //problem nr 1
     //private int limit;
@@ -103,14 +115,12 @@ class PrimeNumbers2  //problem 50
             }
             if (counter ==2)
             {
-                //Appended the Prime number to the String
                 primeNumbers = primeNumbers + i + " ";
                 solution += i;
 
             }
             if(ifisprime(solution)&&solution<1000000) System.out.println("Szukana liczba to:" + solution);
         }
-        //System.out.println("Prime numbers from 1 to n are :");
         System.out.println(primeNumbers);
         System.out.println(solution);
     }
