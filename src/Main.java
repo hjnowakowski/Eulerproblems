@@ -4,6 +4,7 @@ import java.util.*;
 /*
 solved:
 problem 1
+problem 2
 problem 30
 TODO:
 problem 501
@@ -176,7 +177,65 @@ class PrimeNumbers2  //problem 50
 //    }
 //}
 
+class even_fibbonacio_numbers{
 
+
+
+    /*
+    1. fill the fibonacci array (limit 4*10^6), ok
+    2. find even values below 4*10^6
+    3. sum 'em all
+     */
+
+
+
+    private int[] fibonacci_numbers = new int[100];
+
+    //even_fibbonacio_numbers(int a){
+    //    limit = a;
+    //}
+
+
+
+
+
+    void filling_table(int b){
+        fibonacci_numbers[0] = 1;
+        fibonacci_numbers[1] = 2;
+        for(int i = 2; i<b; i++){
+            if(fibonacci_numbers[i-1]+fibonacci_numbers[i-2]>4000000) {
+                System.out.println("Wyraz ciągu fibonacciego większy od miliona, wynosi: "+fibonacci_numbers[i]);
+                break;
+            }
+            fibonacci_numbers[i] = fibonacci_numbers[i-1]+fibonacci_numbers[i-2];
+
+        }
+    }
+
+    int even_fibonacci_sum(){
+        int sum = 0;
+        filling_table(100);
+//        for(int b:fibonacci_numbers)
+//        {
+//            System.out.print(b+", ");
+//        }
+
+
+        for(int a: fibonacci_numbers){
+            if((a%2)==0) {
+                sum += a;
+            }
+        }
+        return sum;
+    }
+
+
+
+
+
+
+
+}
 
 
 
@@ -185,14 +244,14 @@ class PrimeNumbers2  //problem 50
 public class Main {
 
     public static void main(String[] args) {
-        threeandfive ten = new threeandfive(10);
+        //threeandfive ten = new threeandfive(10);
         //System.out.println(ten.solution(1000));
 
-        eighties hundert = new eighties(100);
-        System.out.println("WYNIK ZADANIA 501:   ----   " + hundert.solution(1000) + "   ----");
+        //eighties hundert = new eighties(100);
+        //System.out.println("WYNIK ZADANIA 501:   ----   " + hundert.solution(1000) + "   ----");
 
-        PrimeNumbers2 prime = new PrimeNumbers2();
-        prime.prime();
+        //PrimeNumbers2 prime = new PrimeNumbers2();
+        //prime.prime();
 
 
 //        // Problem nr 30
@@ -206,6 +265,8 @@ public class Main {
 //
 //            }
 //        }
+        even_fibbonacio_numbers one = new even_fibbonacio_numbers();
+        System.out.println("**"+one.even_fibonacci_sum()+"**");
 
 
     }
