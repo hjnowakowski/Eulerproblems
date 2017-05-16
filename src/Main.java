@@ -1,14 +1,23 @@
-import java.util.*;
-
 
 /*
 solved:
 problem 1
 problem 2
 problem 30
+
+inprogress:
+problem 3
+
 TODO:
 problem 501
 problem 50
+ */
+
+
+/*
+TODO: cleanup, another task
+
+TODO: add basic algorithms, constructors
  */
 
 
@@ -145,41 +154,7 @@ class PrimeNumbers2  //problem 50
 
 }
 
-
-
-//class eighties_gen {  //problem nr 501
-//    private int sum = 0;
-//    private int number_of_divosors = 0;
-//    int i = 1;
-//
-//    eighties_gen(int limit1){
-//    }
-//
-//    public int solution(int limit1){
-//        for(; i<=limit1; i++){
-//            if(if_divisors_8(i)) sum++;
-//        }
-//        return sum;
-//    }
-//
-//    public boolean if_divisors_8(int a){
-//        for(int c = 1; c<=a; c++){
-//            if((a%c)==0) number_of_divosors++ ;
-//        }
-//        if(number_of_divosors==8) {
-//            number_of_divosors=0;
-//            return true;
-//        }
-//        else{
-//            number_of_divosors=0;
-//            return false;
-//        }
-//    }
-//}
-
 class even_fibbonacio_numbers{
-
-
 
     /*
     1. fill the fibonacci array (limit 4*10^6), ok
@@ -187,17 +162,7 @@ class even_fibbonacio_numbers{
     3. sum 'em all
      */
 
-
-
     private int[] fibonacci_numbers = new int[100];
-
-    //even_fibbonacio_numbers(int a){
-    //    limit = a;
-    //}
-
-
-
-
 
     void filling_table(int b){
         fibonacci_numbers[0] = 1;
@@ -208,19 +173,11 @@ class even_fibbonacio_numbers{
                 break;
             }
             fibonacci_numbers[i] = fibonacci_numbers[i-1]+fibonacci_numbers[i-2];
-
         }
     }
-
     int even_fibonacci_sum(){
         int sum = 0;
         filling_table(100);
-//        for(int b:fibonacci_numbers)
-//        {
-//            System.out.print(b+", ");
-//        }
-
-
         for(int a: fibonacci_numbers){
             if((a%2)==0) {
                 sum += a;
@@ -228,12 +185,15 @@ class even_fibbonacio_numbers{
         }
         return sum;
     }
+}
 
 
 
-
-
-
+class largest_prime_factor{
+    int limit;
+    largest_prime_factor(int a){
+        limit = a;
+    }
 
 }
 
@@ -244,8 +204,8 @@ class even_fibbonacio_numbers{
 public class Main {
 
     public static void main(String[] args) {
-        //threeandfive ten = new threeandfive(10);
-        //System.out.println(ten.solution(1000));
+        threeandfive ten = new threeandfive(10);
+        System.out.println(ten.solution(1000));
 
         //eighties hundert = new eighties(100);
         //System.out.println("WYNIK ZADANIA 501:   ----   " + hundert.solution(1000) + "   ----");
