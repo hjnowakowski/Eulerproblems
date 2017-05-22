@@ -5,7 +5,7 @@ problem 1
 problem 2
 problem 30
 
-inprogress:
+in progress:
 problem 3
 
 TODO:
@@ -26,7 +26,7 @@ public class Main {
 
     public static void main(String[] args) {
 
-        int choice = 2;
+        int choice = 5;
 
         switch (choice){
             case 1:
@@ -56,6 +56,10 @@ public class Main {
                 break;
 
             case 4:
+                break;
+            case 5:
+                primes_generator primes = new primes_generator(2000);
+                primes.primes_gen();
         }
 
         //PrimeNumbers2 prime = new PrimeNumbers2();
